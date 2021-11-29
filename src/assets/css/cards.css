@@ -1,0 +1,25 @@
+.card-default {
+    box-shadow: var(--simple-boxshadow);
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-default .data {
+}
+
+.card-default .data .title {
+    color: var(--sub);
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.card-default .material-icons {
+    font-size: 2rem;
+    padding: 15px;
+    color: #fff;
+    background: var(--brand);
+    border-radius: 15px;;
+}

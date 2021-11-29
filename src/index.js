@@ -32,6 +32,7 @@ import "./assets/css/sidebar.css";
 import "./assets/css/navbar.css";
 import "./assets/css/buttons.css";
 import "./assets/css/dropdown.css";
+import "./assets/css/cards.css";
 
 import "./assets/css/dark.css";
 import "./assets/css/responsive.css";
@@ -45,9 +46,11 @@ import IconButton from "./components/Buttons/IconButton";
 import IconButtonToggler from "./components/Buttons/IconButtonToggler";
 import SimpleDropdown from "./components/Dropdown/SimpleDropdown";
 import NotificationDropdownItem from "./components/Items/NotificationDropdownItem";
+import CardDefault from "./components/Cards/CardDefault";
 
 // Layouts
 import GridLayout from "./layouts/GridLayout";
+import Wrapper from "./layouts/Wrapper";
 
 export default class Clarity extends Component {
 	constructor(props) {
@@ -76,7 +79,7 @@ export default class Clarity extends Component {
 
 	render() {
 		return(
-			<div className={ this.state.mode == "light" ? "wrapper" : "wrapper dark" }>
+			<Wrapper classes={ this.state.mode == "light" ? "wrapper" : "wrapper dark" }>
 				<Router>
 					<Sidebar title="Clarity">
 						<SidebarTab icon="dashboard" label="Dashboard" url="/" active={ true } />
@@ -84,7 +87,7 @@ export default class Clarity extends Component {
 						<SidebarTab icon="people" label="Contacts" url="/contacts" active={ false } />
 						<SidebarTab icon="settings" label="Settings" url="/settings" active={ false } />
 					</Sidebar>
-					<div className="main-container">
+					<Wrapper classes="main-container">
 						<Navbar>
 							<NavbarSearch placeholder="Search for anything" />
 							<GridLayout size="3">
@@ -110,9 +113,39 @@ export default class Clarity extends Component {
 								</IconButtonToggler>
 							</GridLayout>
 						</Navbar>
-					</div>
+						<GridLayout size="4">
+							<CardDefault
+								title="Used Space"
+								icon="attach_money"
+								data="$4,250"
+								iconColor="#fff"
+								iconBackground="var(--brand)"
+							/>
+							<CardDefault
+								title="Used Space"
+								icon="attach_money"
+								data="$4,250"
+								iconColor="#fff"
+								iconBackground="var(--brand)"
+							/>
+							<CardDefault
+								title="Used Space"
+								icon="attach_money"
+								data="$4,250"
+								iconColor="#fff"
+								iconBackground="var(--brand)"
+							/>
+							<CardDefault
+								title="Used Space"
+								icon="attach_money"
+								data="$4,250"
+								iconColor="#fff"
+								iconBackground="var(--brand)"
+							/>
+						</GridLayout>
+					</Wrapper>
 				</Router>
-			</div>
+			</Wrapper>
 		)
 	}
 }
