@@ -14,3 +14,14 @@
 .dark .sidebar {
 	background: var(--dark-secondary);
 }
+
+/* Items */
+.dark .simple-dropdown {
+	background: var(--dark-secondary);
+	position: absolute;
+	right: calc(100% - 23px);
+	border-radius: 15px;
+	box-shadow: var(--simple-boxshadow);
+	padding: 25px;
+	top: calc(100% + 5px);
+}
