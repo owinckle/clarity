@@ -1,0 +1,16 @@
+:root {
+	--dark-primary: #12141d;
+	--dark-secondary: #20222e;
+	--dark-text: #fff;
+}
+
+/* Main */
+.wrapper.dark {
+	background-color: var(--dark-primary);
+	color: var(--dark-text);
+}
+
+/* Sidebar */
+.dark .sidebar {
+	background: var(--dark-secondary);
+}

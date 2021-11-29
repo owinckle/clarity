@@ -1,0 +1,12 @@
+.icon-button {
+	cursor: pointer;
+	transition: color .3s ease;
+}
+
+.icon-button:hover {
+	color: var(--brand);
+}
+
+.icon-button-drop {
+	position: relative;
+}

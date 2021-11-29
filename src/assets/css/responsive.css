@@ -1,0 +1,20 @@
+@media only screen and (max-width: 768px) {
+	:root {
+		--sidebar-width: 50px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.sidebar .label,
+	.sidebar .title {
+		display: none;
+	}
+
+	.sidebar .tab {
+		justify-content: center;
+	}
+
+	.sidebar .tab .material-icons {
+		margin-right: 0px;
+	}
+}
