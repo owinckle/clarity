@@ -1,0 +1,48 @@
+.sidebar {
+	position: absolute;
+	left: 0px;
+	width: var(--sidebar-width);
+	height: 100vh;
+	background: #fff;
+	box-shadow: var(--simple-boxshadow);
+}
+
+.sidebar .title {
+	text-align: center;
+	padding: 40px 20px;
+	font-size: 1.7rem;
+	font-weight: 400;
+}
+
+.sidebar .title:after {
+	content: "";
+	height: 1px;
+	width: 90%;
+	display: block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 20px;
+	background: var(--sub);
+}
+
+.sidebar .tab {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	cursor: pointer;
+	transition: color .3s ease;
+}
+
+.sidebar .tab.active {
+	background: var(--brand) !important;
+	color: #fff !important;
+}
+
+.sidebar .tab:hover {
+	color: var(--brand);
+}
+
+.sidebar .material-icons {
+	margin-right: 10px;
+}

@@ -1,0 +1,22 @@
+.navbar {
+}
+
+.navbar .search {
+	display: flex;
+	align-items: center;
+}
+
+.navbar .search .material-icons {
+	color: var(--sub);
+	margin-right: 7px;
+}
+
+.navbar .search input {
+	background: transparent;
+	border: none;
+	font-size: 1.2rem;
+}
+
+.navbar .search input::placeholder {
+	color: var(--sub);
+}

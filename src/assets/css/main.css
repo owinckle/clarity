@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+	margin: 0;
+	font-family: "Exo", sans-serif;
+	overflow-x: hidden;
+	font-weight: 400;
+	letter-spacing: 1px;
+	user-select: none;
+	color: #2a3256;
+}
+
+:root {
+	--brand: #573bff;
+	--primary: #f7f8fa;
+	--secondary: #20222e;
+	--third: #636488;
+	--sub: #c5c7d3;
+
+	/* Colors */
+	--danger: #ff4b54;
+	--warning: #ff8f00;
+	--success: #33d69f;
+
+	/* Utils */
+	--simple-boxshadow: 0 0 10px 0px rgb(0 0 0 / 30%);
+
+	/* Variables */
+	--sidebar-width: 250px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+*:focus {
+	outline: none;
+}
+
+.wrapper {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--primary);
+}
+
+.main-container {
+	position: absolute;
+	left: var(--sidebar-width);
+	height: calc(100vh - 95px);
+	width: calc(100vw - var(--sidebar-width) - 100px);
+	padding: 50px;
+	padding-top: 45px;
+}
