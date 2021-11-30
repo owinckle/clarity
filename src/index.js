@@ -27,6 +27,9 @@ import {
 	Redirect,
 } from "react-router-dom";
 
+// Images
+import avatar from "./assets/img/avatar.jpg";
+
 // CSS
 import "./assets/css/main.css";
 import "./assets/css/sidebar.css";
@@ -62,40 +65,8 @@ export default class Clarity extends Component {
 		super(props);
 
 		this.state = {
-			darkMode: true,
-			series: [{
-				name: "User Activity",
-				data: [234, 123, 232, 263, 121, 123, 300]
-			}],
-			options: {
-				chart: {
-					type: 'bar',
-					height: 350,
-					toolbar: {
-						show: false
-					}
-				},
-				plotOptions: {
-					bar: {
-						horizontal: false,
-						columnWidth: '30%',
-						borderRadius: 7
-					},
-				},
-				dataLabels: {
-					enabled: false
-				},
-				stroke: {
-					show: true,
-					width: 1,
-					colors: ['transparent']
-				},
-				xaxis: {
-					categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-				},
-				colors: ["#573bff"]
-			}
-		};
+			darkMode: false
+		}
 
 		this.updateState	= this.updateState.bind(this);
 		this.lightSwitch	= this.lightSwitch.bind(this);
@@ -115,6 +86,33 @@ export default class Clarity extends Component {
 	}
 
 	render() {
+		const salesSeries = [{
+			name: "User Activity",
+			data: [234, 123, 232, 263, 121, 123, 300]
+		}];
+		const salesOptions = {
+			chart: {
+				type: "bar",
+				toolbar: {
+					show: false
+				}
+			},
+			plotOptions: {
+				bar: {
+					horizontal: false,
+					columnWidth: "30%",
+					borderRadius: 7
+				},
+			},
+			dataLabels: {
+				enabled: false
+			},
+			xaxis: {
+				categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+			},
+			colors: ["#573bff"]
+		};
+
 		return(
 			<Wrapper classes={ this.state.darkMode ? "wrapper dark" : "wrapper" }>
 				<Router>
@@ -132,17 +130,17 @@ export default class Clarity extends Component {
 								<IconButtonToggler icon="notifications" action={ null }>
 									<SimpleDropdown>
 										<NotificationDropdownItem
-											avatar="https://i.gyazo.com/a444eff2eec3ac169baf41b7d56d9169.jpg"
+											avatar={ avatar }
 											label="New message from Yukinox"
 											timestamp="14 minutes ago"
 										/>
 										<NotificationDropdownItem
-											avatar="https://i.gyazo.com/a444eff2eec3ac169baf41b7d56d9169.jpg"
+											avatar={ avatar }
 											label="New message from Yukinox"
 											timestamp="14 minutes ago"
 										/>
 										<NotificationDropdownItem
-											avatar="https://i.gyazo.com/a444eff2eec3ac169baf41b7d56d9169.jpg"
+											avatar={ avatar }
 											label="Payment successfully completed"
 											timestamp="2 days ago"
 										/>
@@ -180,33 +178,14 @@ export default class Clarity extends Component {
 								iconBackground="var(--danger)"
 							/>
 						</Grid>
-						<Grid size="3">
-							<Card title="User Activity">
+						<Grid size="1-2">
+							<Card title="Sales">
 								<Chart
-									options={this.state.options}
-									series={this.state.series}
+									series={ salesSeries }
+									options={ salesOptions }
 									type="bar"
 								/>
 							</Card>
-							<Card title="User Activity"></Card>
-							<Wrapper classes="grid">
-								<CardInfo
-									title="Total Earnings"
-									icon="receipt"
-									data="$2,654"
-									iconColor="#fff"
-									iconBackground="var(--brand)"
-								/>
-								<CardInfo
-									title="Total Sales"
-									icon="info"
-									data="452"
-									iconColor="#fff"
-									iconBackground="var(--success)"
-								/>
-							</Wrapper>
-						</Grid>
-						<Grid size="2">
 							<Card title="Products">
 								<Grid size="3">
 									<TableHeadLabel label="ID" />
