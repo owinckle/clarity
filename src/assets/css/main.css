@@ -14,7 +14,7 @@ body {
 	--primary: #f7f8fa;
 	--secondary: #fff;
 	--text: #2a3256;
-	--sub: #c5c7d3;
+	--sub: #757575;
 
 	/* Colors */
 	--danger: #ff4b54;
@@ -58,7 +58,8 @@ a {
 
 .grid {
 	display: grid;
-	grid-column-gap: 30px;
+	grid-gap: 30px;
+	grid-template-rows: auto auto;
 }
 
 ._2-grid {

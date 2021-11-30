@@ -1,0 +1,8 @@
+.table-head {
+    color: var(--sub);
+    font-weight: 500;
+}
+
+.table-item {
+    font-size: .9rem;
+}
