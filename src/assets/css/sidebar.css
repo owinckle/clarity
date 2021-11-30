@@ -1,5 +1,5 @@
 .sidebar {
-	position: absolute;
+	position: fixed;
 	left: 0px;
 	width: var(--sidebar-width);
 	height: 100vh;

@@ -87,7 +87,7 @@ export default class Clarity extends Component {
 
 	render() {
 		const salesSeries = [{
-			name: "User Activity",
+			name: "Sales",
 			data: [234, 123, 232, 263, 121, 123, 300]
 		}];
 		const salesOptions = {
@@ -109,6 +109,39 @@ export default class Clarity extends Component {
 			},
 			xaxis: {
 				categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+			},
+			colors: ["#573bff"]
+		};
+
+		const revenueSeries = [
+			{
+				name: "Total",
+				data: [31, 40, 28, 51, 42, 109]
+			},
+			{
+				name: "Pipeline",
+				data: [11, 32, 45, 32, 34, 52]
+			},
+		];
+		const revenueOptions = {
+			chart: {
+				type: "bar",
+				toolbar: {
+					show: false
+				}
+			},
+			plotOptions: {
+				bar: {
+					horizontal: false,
+					columnWidth: "30%",
+					borderRadius: 7
+				},
+			},
+			dataLabels: {
+				enabled: false
+			},
+			xaxis: {
+				categories: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
 			},
 			colors: ["#573bff"]
 		};
@@ -184,34 +217,50 @@ export default class Clarity extends Component {
 									series={ salesSeries }
 									options={ salesOptions }
 									type="bar"
+									height={ 200 }
 								/>
 							</Card>
 							<Card title="Products">
-								<Grid size="3">
+								<Grid size="4">
 									<TableHeadLabel label="ID" />
 									<TableHeadLabel label="Name" />
 									<TableHeadLabel label="Price" />
+									<TableHeadLabel label="Status" />
 								</Grid>
-								<Grid size="3">
+								<Grid size="4">
 									<TableItem text="1" />
 									<TableItem text="T-Shirt" />
 									<TableItem text="$39.99" />
+									<TableItem text="In Stock" />
 								</Grid>
-								<Grid size="3">
+								<Grid size="4">
 									<TableItem text="2" />
 									<TableItem text="Shoes" />
 									<TableItem text="$59.99" />
+									<TableItem text="In Stock" />
 								</Grid>
-								<Grid size="3">
+								<Grid size="4">
 									<TableItem text="3" />
 									<TableItem text="Gloves" />
 									<TableItem text="$29.99" />
+									<TableItem text="In Stock" />
 								</Grid>
-								<Grid size="3">
+								<Grid size="4">
 									<TableItem text="4" />
 									<TableItem text="Socks" />
 									<TableItem text="$9.99" />
+									<TableItem text="Out of Stock" />
 								</Grid>
+							</Card>
+						</Grid>
+						<Grid size="2-1">
+							<Card title="Overall Revenue">
+								<Chart
+									series={ revenueSeries }
+									options={ revenueOptions }
+									type="area"
+									height={ 350 }
+								/>
 							</Card>
 						</Grid>
 					</Wrapper>
