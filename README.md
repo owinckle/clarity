@@ -12,6 +12,7 @@ Clone the repository with the following command:
 ``git clone https://github.com/creativetimofficial/purity-ui-dashboard.git``
 
 Run in terminal this command:
+
 ``npm install``
 
 Then run this command to start your local server:
