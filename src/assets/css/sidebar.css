@@ -30,14 +30,19 @@
 .sidebar .tab {
 	display: flex;
 	align-items: center;
-	padding: 15px;
+	padding: 10px 15px;
 	cursor: pointer;
 	transition: color .3s ease;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	width: 70%;
 }
 
 .sidebar .tab.active {
 	background: var(--brand) !important;
 	color: #fff !important;
+	box-shadow: var(--simple-boxshadow);
 }
 
 .sidebar .tab:hover {

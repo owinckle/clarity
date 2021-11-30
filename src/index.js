@@ -29,6 +29,7 @@ import {
 
 // Images
 import avatar from "./assets/img/avatar.jpg";
+import email from "./assets/img/email.jpg";
 
 // CSS
 import "./assets/css/main.css";
@@ -53,6 +54,7 @@ import SimpleDropdown from "./components/Dropdown/SimpleDropdown";
 import NotificationDropdownItem from "./components/Items/NotificationDropdownItem";
 import Card from "./components/Cards/Card";
 import CardInfo from "./components/Cards/CardInfo";
+import CardEvent from "./components/Cards/CardEvent";
 import TableHeadLabel from "./components/Items/TableHeadLabel";
 import TableItem from "./components/Items/TableItem";
 
@@ -136,7 +138,7 @@ export default class Clarity extends Component {
 			xaxis: {
 				categories: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
 			},
-			colors: ["#573bff"]
+			colors: ["#573bff", "#05c4f9"]
 		};
 
 		return(
@@ -255,6 +257,9 @@ export default class Clarity extends Component {
 									height={ 350 }
 								/>
 							</Card>
+							<CardEvent
+								image={ email }
+							/>
 						</Grid>
 					</Wrapper>
 				</Router>

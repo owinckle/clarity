@@ -13,27 +13,83 @@
     grid-row-gap: 10px;
 }
 
-.card-info {
-    box-shadow: var(--simple-boxshadow);
-    border-radius: 10px;
-    padding: 20px 30px;
+.card.info {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--secondary);
 }
 
 .card .title,
-.card-info .data .title {
+.card.info .data .title {
     color: var(--sub);
     font-weight: 400;
     font-size: .8rem;
 }
 
-.card-info .material-icons {
+.card.info .material-icons {
     font-size: 2rem;
     padding: 15px;
     color: #fff;
     background: var(--brand);
     border-radius: 15px;;
+}
+
+.card.event img {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.card.event .head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card.event .head .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid var(--sub);
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.card.event .head .date .day {
+    margin-bottom: 5px;
+}
+
+.card.event .head .meet-title {
+    font-size: 1.2rem;
+}
+
+.card.event .head .subtitle {
+    color: var(--sub);
+    font-size: .85rem;
+}
+
+.card.event .info {
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.card.event .info .label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.card.event .info .sub-label {
+    color: var(--sub);
+    font-size: .85rem;
+}
+
+.card.event .info .material-icons {
+    margin-right: 15px;
+    background: #eeedfd;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--brand);
 }
