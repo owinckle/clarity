@@ -29,6 +29,7 @@ Clarity Dashboard provides an initial index.js file with the necessary code stru
 A ``div`` element taking multiple CSS classes
 ```js
 import Wrapper from "./layouts/Wrapper";
+
 <Wrapper classes="main-container">
 </Wrapper>
 ```
@@ -45,6 +46,7 @@ For example, size of 4 sets the following class:
 Usage:
 ```js
 import Grid from "./layouts/Grid";
+
 <Grid size="4">
 </Grid>
 ```
@@ -59,8 +61,8 @@ import Card from "./components/Cards/Card";
 ```
 
 #### Card Info
-```js
 A predefined card to display information
+```js
 import CardInfo from "./components/Cards/CardInfo";
 
 <CardInfo
