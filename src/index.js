@@ -62,7 +62,7 @@ export default class Clarity extends Component {
 		super(props);
 
 		this.state = {
-			mode: "light",
+			darkMode: true,
 			series: [{
 				name: "User Activity",
 				data: [234, 123, 232, 263, 121, 123, 300]
@@ -92,7 +92,8 @@ export default class Clarity extends Component {
 				},
 				xaxis: {
 					categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-				}
+				},
+				colors: ["#573bff"]
 			}
 		};
 
@@ -109,13 +110,13 @@ export default class Clarity extends Component {
 	// Switch between light and dark mode
 	lightSwitch() {
 		this.setState({
-			mode: this.state.mode == "light" ? "dark" : "light"
+			darkMode: this.state.darkMode ? false : true
 		});
 	}
 
 	render() {
 		return(
-			<Wrapper classes={ this.state.mode == "light" ? "wrapper" : "wrapper dark" }>
+			<Wrapper classes={ this.state.darkMode ? "wrapper dark" : "wrapper" }>
 				<Router>
 					<Sidebar title="Clarity">
 						<SidebarTab icon="dashboard" label="Dashboard" url="/" active={ true } />
@@ -127,7 +128,7 @@ export default class Clarity extends Component {
 						<Navbar>
 							<NavbarSearch placeholder="Search for anything" />
 							<Grid size="2">
-								<IconButton icon="dark_mode" action={ this.lightSwitch } />
+								<IconButton icon={ this.state.darkMode ? "light_mode" : "dark_mode" } action={ this.lightSwitch } />
 								<IconButtonToggler icon="notifications" action={ null }>
 									<SimpleDropdown>
 										<NotificationDropdownItem
