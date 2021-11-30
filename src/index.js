@@ -258,7 +258,12 @@ export default class Clarity extends Component {
 								/>
 							</Card>
 							<CardEvent
-								image={ email }
+								image={email} // Image
+								title="Product Design Meeting"
+								subtitle="Meeting with the product team"
+								calendarDate={["Mon", "14"]}
+								fullDate={["Mon, Jun 14, 2021", "10AM to 6PM"]}
+								location={["Central Park", "Manhattan, New York City"]}
 							/>
 						</Grid>
 					</Wrapper>

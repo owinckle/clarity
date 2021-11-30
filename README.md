@@ -102,6 +102,21 @@ import CardInfo from "./components/Cards/CardInfo";
 />
 ```
 
+### Card Event
+A predefined card for events
+```js
+import CardEvent from "./components/Cards/CardEvent";
+
+<CardEvent
+    image={ productImage } // Image
+    title="Product Design Meeting"
+    subtitle="Meeting with the product team"
+    calendarDate={["Mon", "14"]}
+    fullDate={["Mon, Jun 14, 2021", "10AM to 6PM"]}
+    location={["Central Park", "Manhattan, New York City"]}
+/>
+```
+
 ### Buttons
 #### Icon Button
 An icon that works as a button. This component takes two props, "icon" and "action", being respectively a Material Icons icon and a function.

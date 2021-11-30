@@ -88,7 +88,7 @@
 
 .card.event .info .material-icons {
     margin-right: 15px;
-    background: #eeedfd;
+    background: var(--brand-transparent);
     padding: 10px;
     border-radius: 10px;
     color: var(--brand);

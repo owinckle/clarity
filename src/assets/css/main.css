@@ -11,6 +11,7 @@ body {
 
 :root {
 	--brand: #573bff;
+	--brand-transparent: #eeedfd;
 	--primary: #f7f8fa;
 	--secondary: #fff;
 	--text: #2a3256;
