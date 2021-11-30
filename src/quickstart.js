@@ -60,16 +60,10 @@ export default class Clarity extends Component {
             darkMode: false
         }
 
-        this.updateState = this.updateState.bind(this);
         this.lightSwitch = this.lightSwitch.bind(this);
     }
 
-    updateState(target, value) {
-        this.setState({
-            [target]: value
-        });
-    }
-
+    // This function can modified changed to suit your needs.
     lightSwitch() {
         this.setState({
             darkMode: this.state.darkMode ? false : true
@@ -92,7 +86,7 @@ export default class Clarity extends Component {
                             <NavbarSearch placeholder="Search for anything" />
                             <Grid size="2">
                                 <IconButton icon={this.state.darkMode ? "light_mode" : "dark_mode"} action={this.lightSwitch} />
-                                <IconButtonToggler icon="notifications" action={null}>
+                                <IconButtonToggler icon="notifications">
                                     <SimpleDropdown>
                                         <NotificationDropdownItem
                                             avatar={avatar}
