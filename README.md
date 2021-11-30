@@ -22,7 +22,7 @@ Then run this command to start your local server:
 
 Clarity Dashboard provides an initial index.js file with the necessary code structure to get started:
 
-``
+```js
 export default class Clarity extends Component {
 	constructor(props) {
 		super(props);
@@ -41,7 +41,6 @@ export default class Clarity extends Component {
 		});
 	}
 
-	// Switch between light and dark mode
 	lightSwitch() {
 		this.setState({
 			darkMode: this.state.darkMode ? false : true
@@ -81,4 +80,4 @@ export default class Clarity extends Component {
 		)
 	}
 }
-``
+```
