@@ -9,7 +9,7 @@ Install Clarity Dashboard by running either of the following:
 
 Clone the repository with the following command:
 
-``git clone https://github.com/creativetimofficial/purity-ui-dashboard.git``
+``git clone https://github.com/owinckle/clarity.git``
 
 Run in terminal this command:
 
